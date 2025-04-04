@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation der Nervenzelle</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .nervenzelle {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #f39c12;
+            border: 5px solid #e67e22;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+        .synapse {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #1abc9c;
+            animation: synapseAnimation 2s infinite;
+        }
+        @keyframes synapseAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
+        .axon {
+            position: absolute;
+            width: 20px;
+            height: 100px;
+            background-color: #3498db;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+        .synapse1 {
+            top: 20%;
+            left: 100%;
+            animation-delay: 0s;
+        }
+        .synapse2 {
+            top: 60%;
+            left: 100%;
+            animation-delay: 1s;
+        }
+        .synapse3 {
+            top: 80%;
+            left: 100%;
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="nervenzelle">
+        <!-- Synapsen -->
+        <div class="synapse synapse1"></div>
+        <div class="synapse synapse2"></div>
+        <div class="synapse synapse3"></div>
+        
+        <!-- Axon -->
+        <div class="axon"></div>
+    </div>
+
+    <script>
+        // Hier könnte später eine JavaScript-Logik für Interaktionen kommen.
+        // Zum Beispiel könnte man hier einen Klick-Event hinzufügen, um die Übertragung von Informationen zu simulieren
+        document.querySelector('.nervenzelle').addEventListener('click', function() {
+            alert('Die Nervenzelle wird aktiviert und sendet Informationen!');
+        });
+    </script>
+</body>
+</html>
