@@ -3,10 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nervenzelle Simulation</title>
+    <title>Simulation der Nervenzelle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .nervenzelle {
+            width: 400px;
+            height: 200px;
+            border: 2px solid #000;
+            border-radius: 20px;
+            position: relative;
+            background-color: #e8f5e9;
+        }
+        .impuls {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ff6347;
+            position: absolute;
+            left: -30px;
+            top: 90px;
+            animation: moveImpuls 4s linear infinite;
+        }
+
+        @keyframes moveImpuls {
+            0% {
+                left: -30px;
+            }
+            25% {
+                left: 100px;
+            }
+            50% {
+                left: 200px;
+            }
+            75% {
+                left: 300px;
+            }
+            100% {
+                left: 400px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Simulation der Nervenzelle</h1>
-    <p>Hier könnte deine Simulation oder Beschreibung zur Nervenzelle stehen.</p>
+
+    <div class="nervenzelle">
+        <div class="impuls"></div>
+    </div>
+
 </body>
 </html>
